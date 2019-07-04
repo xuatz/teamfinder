@@ -27,15 +27,19 @@
     "redux-form": "^6.5.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
-    "reselect": "^2.5.4"
+    "reselect": "^2.5.4",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "env NODE_PATH=./src react-scripts start",
     "build": "env NODE_PATH=./src react-scripts build",
     "test": "env NODE_PATH=./src react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "snyk": true
 }
